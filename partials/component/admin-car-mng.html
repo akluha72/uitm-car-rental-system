@@ -1,0 +1,92 @@
+<div class="tab-pane fade" id="cars" role="tabpanel">
+    <!-- Car Management Header -->
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <h4>Car Management</h4>
+        </div>
+        <div class="col-md-6 text-right">
+            <button class="btn btn-success" data-toggle="modal" data-target="#carModal" onclick="openCarModal()">
+                <i class="fas fa-plus mr-2"></i>Add New Car
+            </button>
+        </div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Search cars..." id="carSearch">
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" id="statusFilter">
+                <option value="">All Status</option>
+                <option value="available">Available</option>
+                <option value="rented">Rented</option>
+                <option value="maintenance">Maintenance</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" id="makeFilter">
+                <option value="">All Makes</option>
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="bmw">BMW</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Cars Table -->
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Image</th>
+                            <th>Make/Model</th>
+                            <th>Year</th>
+                            <th>License Plate</th>
+                            <th>Daily Rate</th>
+                            <th>Mileage</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carsTableBody">
+                        <tr>
+                            <td><img src="https://via.placeholder.com/60x40" class="img-thumbnail">
+                            </td>
+                            <td><strong>Toyota Camry</strong></td>
+                            <td>2022</td>
+                            <td>ABC-1234</td>
+                            <td>$45/day</td>
+                            <td>25,000 km</td>
+                            <td><span class="badge badge-success">Available</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary" onclick="editCar(1)"><i
+                                        class="fas fa-edit"></i></button>
+                                <button class="btn btn-sm btn-outline-danger" onclick="deleteCar(1)"><i
+                                        class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://via.placeholder.com/60x40" class="img-thumbnail">
+                            </td>
+                            <td><strong>Honda Civic</strong></td>
+                            <td>2021</td>
+                            <td>XYZ-5678</td>
+                            <td>$40/day</td>
+                            <td>18,500 km</td>
+                            <td><span class="badge badge-warning">Rented</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary" onclick="editCar(2)"><i
+                                        class="fas fa-edit"></i></button>
+                                <button class="btn btn-sm btn-outline-danger" onclick="deleteCar(2)"><i
+                                        class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
