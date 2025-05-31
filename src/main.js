@@ -4,6 +4,17 @@ import './style.scss'
 // import { setupCounter } from './counter.js'
 
 
+import bg_1 from './images/bg_1.jpg';
+import car_1 from './images/car-1.jpg';
+import car_2 from './images/car-2.jpg';
+import car_3 from './images/car-3.jpg';
+import car_4 from './images/car-4.jpg';
+import about from './images/about.jpg';
+import bg_3 from './images/bg_3.jpg';
+import person_1 from './images/person_1.jpg';
+import person_2 from './images/person_2.jpg';
+import person_3 from './images/person_3.jpg';
+
 
 AOS.init({
   duration: 800,
